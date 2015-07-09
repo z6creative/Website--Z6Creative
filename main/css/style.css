@@ -1,0 +1,299 @@
+﻿/*================================
+    GENERAL STYLES
+==================================*/
+
+/*@import url(http://fonts.googleapis.com/css?family=Roboto);  GOOGLE FREE FONTS */
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+section {
+    padding-top: 80px;
+    padding-bottom: 120px;
+}
+
+.head-set {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.pad-bottom {
+    padding-bottom: 60px;
+}
+/*================================
+    NAVBAR STYLES
+==================================*/
+
+.navbar-brand {
+    padding: 0px;
+}
+
+.navbar-inverse {
+  background-color: transparent;
+  border-color: #141414;
+}
+@media (max-width: 768px) {
+  .navbar-inverse {
+      background-color: rgb(37, 37, 37);
+      border-color: #141414;
+    }
+}
+.navbar-inverse .navbar-nav>li>a{
+  color: #FFFFFF;
+}
+
+.navbar {
+  min-height: 50px;
+  margin-bottom: 0px;
+  border: 1px solid transparent;
+  text-transform: uppercase;
+  -webkit-transition: all 0.125s ease-in-out 0s;
+  -moz-transition: all 0.125s ease-in-out 0s;
+  -ms-transition: all 0.125s ease-in-out 0s;
+  -o-transition: all 0.125s ease-in-out 0s;
+  transition: all 0.125s ease-in-out 0s;
+  padding: 8px;
+}
+@media (min-width: 768px) {
+    .navbar {
+        border-radius: 0px;
+        padding: 20px 0;
+    }
+}
+@media (min-width: 768px) {
+    .navbar-header {
+        float: left;
+    }
+}
+.navbar-custom .navbar-brand {
+  font: 700 18px/1.2 'Montserrat', serif, sans-serif;
+  text-transform: uppercase;
+}
+
+.navbar-color{
+  background: rgb(37, 37, 37);
+  box-shadow: 0 0 4px rgba(0, 0, 0, .2);
+  padding: 8px;
+}
+.navbar-color .navbar-brand,
+.custom-collapse .navbar-brand,
+.navbar-color .navbar-nav > li > a,
+.navbar-color .navbar-nav .dropdown-menu > li > a,
+.custom-collapse .navbar-nav > li > a,
+.custom-collapse .navbar-nav .dropdown-menu > li > a {
+  color: #FFF;
+}
+/* QUANDO ARRUMAR SCROLLSPY TIRAR ISSO
+.navbar-color .navbar-nav > li.active {
+  border-bottom: 3px solid #FFF;
+}*/
+
+.navbar-color .navbar-toggle .icon-bar,
+.custom-collapse .navbar-toggle .icon-bar {
+  background: #FFFFFF;
+}
+.navbar-inverse .navbar-nav>.active>a,
+.navbar-inverse .navbar-nav>.active>a:hover,
+.navbar-inverse .navbar-nav>.active>a:focus{
+  background-color: transparent;
+}
+.navbar-inverse .navbar-toggle:hover, 
+.navbar-inverse .navbar-toggle:focus{
+  background-color: #FF6600;
+}
+.navbar-inverse .navbar-toggle{
+  background-color: #FF6600;
+}
+.custom-collapse .navbar-toggle .icon-bar {
+  background: #rgb(37, 37, 37);
+}
+
+
+/*================================
+ Hover navbar
+==================================*/
+
+@media (min-width: 768px) {
+    .cl-effect-12 a::before,
+    .cl-effect-12 a::after {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100px;
+      height: 100px;
+      border: 2px solid rgba(255, 102, 0, 1);
+      border-radius: 50%;
+      content: '';
+      opacity: 0;
+      -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+      -moz-transition: -moz-transform 0.3s, opacity 0.3s;
+      transition: transform 0.3s, opacity 0.3s;
+      -webkit-transform: translateX(-50%) translateY(-50%) scale(0.2);
+      -moz-transform: translateX(-50%) translateY(-50%) scale(0.2);
+      transform: translateX(-50%) translateY(-50%) scale(0.2);
+    }
+
+    .cl-effect-12 a::after {
+      width: 90px;
+      height: 90px;
+      border-width: 6px;
+      -webkit-transform: translateX(-50%) translateY(-50%) scale(0.8);
+      -moz-transform: translateX(-50%) translateY(-50%) scale(0.8);
+      transform: translateX(-50%) translateY(-50%) scale(0.8);
+    }
+
+    .cl-effect-12 a:hover::before,
+    .cl-effect-12 a:hover::after,
+    .cl-effect-12 a:focus::before,
+    .cl-effect-12 a:focus::after {
+      opacity: 1;
+      -webkit-transform: translateX(-50%) translateY(-50%) scale(1);
+      -moz-transform: translateX(-50%) translateY(-50%) scale(1);
+      transform: translateX(-50%) translateY(-50%) scale(1);
+    }
+}
+/*================================
+    HOME SECTION STYLES
+==================================*/
+
+/*STYLE OF BACKGROUND IMAGE*/
+#home {
+    background: url(../img/home.jpg) no-repeat center center; /*Full Witdth background image*/
+    padding: 0;
+    -webkit-background-size: cover;
+    background-size: cover;
+    -moz-background-size: cover;
+    min-height: 600px;
+}
+    /*STYLE FOR OVERLAY CLASS - WHICH IS ABOVE IMAGE WITH OPACITY/TRANSPARENCY 0.75*/
+    #home .overlay {
+        padding-top: 90px;
+        background-color: rgba(55, 54, 54, 0.7); /*.75 opacity of the color so that background image is visible*/
+        min-height: 600px;
+        color: #fff;
+    }
+
+    #home h1 {
+        padding-top: 80px;
+        font-weight: 900;
+        font-size: 100px;
+        font-family: 'Browallia New';
+    }
+@media (max-width: 768px) {
+	#home h1 {
+		font-size: 80px;
+	}
+}
+/*SMPLE CLASS TO ADJUST SECTION PADDING & HEIGHT*/
+
+/*CLASS TO FORMAT TEXT*/
+.p-cls {
+    padding-top: 30px;
+    padding-bottom: 40px;
+}
+
+/*======================================
+    PARALLAX LIKE / STATS SECTION STYLES
+=========================================*/
+
+.parallax-like {
+ background: url(../img/stats.jpg) no-repeat center center; /* DEFINE IMAGE PATH CAREFULLY*/
+ padding: 0;
+ -webkit-background-size: cover;
+ background-size: cover;
+ -moz-background-size: cover;
+ color: #fff;
+}
+.parallax-like .overlay {
+ min-height: 200px;
+ background: rgba(55, 54, 54, 0.7);
+ font-size: 40px;
+ padding-bottom: 60px;
+ padding-top: 60px;
+}
+
+@media (min-width: 768px) {
+ .parallax-like {
+ background-attachment: fixed;
+ } 
+}
+
+/*================================
+    PORTFOLIO / WORK SECTION STYLES
+==================================*/
+.portfolio-item img:hover { /* POSTFOLIO IMAGE BIG ON HOVER */
+    cursor: pointer;
+    -webkit-transform: scale(1.1, 1.1);
+    -ms-transform: scale(1.1, 1.1);
+    transform: scale(1.1, 1.1);
+    transition-duration: 0.3s;
+    -webkit-transition-duration: 0.3s; /* Safari */
+    z-index: 1;
+}
+
+/*================================
+    CLIENTS SECTION STYLES
+==================================*/
+#clients {
+    background-color:#f4f4f4;
+    padding-bottom:50px;
+    padding-top:50px;
+}
+    #clients img {
+        opacity:0.5;
+        cursor:pointer;
+    }
+        #clients img:hover {
+            opacity:1;
+        }
+
+
+/*================================
+ * Form Z6 footer
+==================================*/
+
+#contact a{
+  color: #FF6600;
+}
+
+#contact h2{
+  font-size: 40px;
+  font-weight: 700;
+  font: 400 46px/1.2 'Montserrat', serif, sans-serif;
+}
+
+#contact .icon-list{
+  list-style: none;
+  padding: 0px;
+}
+
+#contact .btn-custom-1{
+  background: transparent;
+  border: 2px solid #FF6600;
+  padding: 15px 25px;
+}
+
+#contact .btn-custom-1:hover, .btn-custom-1:focus, .btn-custom-1:active, .btn-custom-1.active {
+  background: #FF6600;
+  border: 2px solid #FF6600;
+  color: #FFF;
+}
+
+#contact {
+  background: #18191a;
+  color: #FFF;
+  padding: 80px 0;
+}
+
+#contact h1, #contact h2, #contact h3, #contact h4, #contact h5, #contact h6 {
+  color: #FFF;
+}
+
+#contact .form-control {
+  border: 0;
+}
+
+.ajax-response {
+  margin-top: 15px;
+}
