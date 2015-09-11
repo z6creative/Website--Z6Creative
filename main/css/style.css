@@ -1,8 +1,6 @@
 ﻿/*================================
     GENERAL STYLES
-==================================*/
-
-/*@import url(http://fonts.googleapis.com/css?family=Roboto);  GOOGLE FREE FONTS */
+==================================*/ 
 
 body {
     font-family: 'Roboto', sans-serif;
@@ -185,6 +183,11 @@ section {
 		font-size: 80px;
 	}
 }
+@media (max-width: 480px) {
+  #home h1 {
+    font-size: 55px;
+  }
+}
 /*SMPLE CLASS TO ADJUST SECTION PADDING & HEIGHT*/
 
 /*CLASS TO FORMAT TEXT*/
@@ -222,32 +225,62 @@ section {
 /*================================
     PORTFOLIO / WORK SECTION STYLES
 ==================================*/
-.portfolio-item img:hover { /* POSTFOLIO IMAGE BIG ON HOVER */
-    cursor: pointer;
-    -webkit-transform: scale(1.1, 1.1);
-    -ms-transform: scale(1.1, 1.1);
-    transform: scale(1.1, 1.1);
-    transition-duration: 0.3s;
-    -webkit-transition-duration: 0.3s; /* Safari */
-    z-index: 1;
+.portfolio_img {
+  overflow: hidden;
+  height: 100%;
 }
 
+.portfolio_img img {
+  max-width: 100%;
+  height: 45vh;
+  padding-bottom: 5px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (max-width: 768px) {
+ .portfolio_img img{
+ height: 15vh;
+ }
+}
+.portfolio_img-preview {
+  position: relative;
+}
+
+.portfolio_img-description {
+  background: rgba(255, 255, 255, .85);
+  position: absolute;
+  right: 0;
+  bottom: -70px;
+  left: 0;
+  padding: 25px;
+  text-align: center;
+  opacity: 0;
+  color: #222;
+}
 /*================================
     CLIENTS SECTION STYLES
 ==================================*/
-#clients {
-    background-color:#f4f4f4;
-    padding-bottom:50px;
-    padding-top:50px;
-}
-    #clients img {
-        opacity:0.5;
-        cursor:pointer;
-    }
-        #clients img:hover {
-            opacity:1;
-        }
 
+.content-section-a {
+    padding: 50px 0;
+}
+
+.content-section-b {
+    padding: 50px 0;
+    border-top: 1px solid #e7e7e7;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.section-heading {
+    margin-bottom: 30px;
+}
+
+.section-heading-spacer {
+    float: left;
+    width: 200px;
+    border-top: 3px solid #e7e7e7;
+}
 
 /*================================
  * Form Z6 footer
@@ -260,7 +293,12 @@ section {
 #contact h2{
   font-size: 40px;
   font-weight: 700;
-  font: 400 46px/1.2 'Montserrat', serif, sans-serif;
+  font: 400 50px/1.2 'Montserrat', serif, sans-serif;
+  margin: 0px;
+}
+
+#contact h3{
+  font-size: 30px;
 }
 
 #contact .icon-list{
@@ -281,13 +319,13 @@ section {
 }
 
 #contact {
-  background: #18191a;
+  background: #252525;
   color: #FFF;
   padding: 80px 0;
 }
 
 #contact h1, #contact h2, #contact h3, #contact h4, #contact h5, #contact h6 {
-  color: #FFF;
+  color: #FF6600;
 }
 
 #contact .form-control {
@@ -296,4 +334,29 @@ section {
 
 .ajax-response {
   margin-top: 15px;
+}
+
+.footer
+{
+  padding: 30px 0 30px;
+  font-size: .9em;
+  color: #999;
+  background:rgba(0,0,0,0.9);
+  bottom:0;
+  left:0;
+}
+
+.footer_content{
+  padding: 0 20px 0 0;
+}
+.footer_border{
+  border-right: 1px solid rgb(226, 230, 236);
+}
+.footer_content img{
+  width: 120px;
+}
+.footer_content p{
+  margin: 10px 0 0 0;
+  font-size: 14px;
+  line-height: 1.3em;
 }

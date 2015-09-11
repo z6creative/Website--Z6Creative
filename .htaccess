@@ -1,0 +1,30 @@
+#Redireciona para https://z6creative.com.br
+
+RewriteCond %{HTTP:CF-Visitor} '"scheme":"http"'
+RewriteRule ^(.*)$ https://z6creative.com.br [L]
+
+# Do not remove this line or mod_rewrite rules and search engine friendly URLs will stop working
+RewriteBase /
+AddType image/gif .gif
+
+# BEGIN GZIP
+<ifmodule mod_deflate.c>
+AddOutputFilterByType DEFLATE text/text text/html text/plain text/xml text/css application/x-javascript application/javascript
+</ifmodule>
+# END GZIP
+
+#BEGIN EXPIRES
+<ifModule mod_headers.c>
+ExpiresActive On
+
+# Expires after 1 month
+<filesMatch ".(gif|png|jpg|jpeg|ico|pdf|js|htm|html|txt)$">
+Header set Cache-Control "max-age=2592000, public"
+</filesMatch>
+
+# Expires after 7 days
+<filesMatch ".(css)$">
+Header set Cache-Control "max-age=604800, public"
+</filesMatch>
+</ifModule>
+#END EXPIRES
